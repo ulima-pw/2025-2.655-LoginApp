@@ -11,12 +11,13 @@ const SeccionCentral = (props : SeccionCentralProps) => {
             <img className="logo" 
                 src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png' />
         </div>
-        <FormularioLogin />
+        <FormularioLogin onLogin={ props.onLogin } />
     </div>
 }
 
 interface SeccionCentralProps {
     texto : string
+    onLogin : (username : string, password: string) => void
 }
 
 export default SeccionCentral
