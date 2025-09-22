@@ -7,7 +7,7 @@ const LoginPage = () => {
                 &nbsp;
             </div>
             <div className="col">
-                <SeccionCentral />
+                <SeccionCentral texto={"Login"} />
             </div>
             <div className="col">
                 &nbsp;
