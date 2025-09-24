@@ -12,11 +12,35 @@ const SeccionCentral = (props : SeccionCentralProps) => {
                 src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png' />
         </div>
         <FormularioLogin onLogin={ props.onLogin } />
+        {
+            (() => {
+                if (props.errorLogin != undefined) {
+                    return props.errorLogin ?
+                        <div className="alert alert-danger mt-3">
+                            Error en login
+                        </div> :
+                        <div className="alert alert-success mt-3">
+                            Login exitoso
+                        </div>
+                }
+            })()
+
+            /*props.errorLogin != undefined ? (props.errorLogin ?
+                <div className="alert alert-danger mt-3">
+                    Error en login
+                </div> :
+                <div className="alert alert-success mt-3">
+                    Login exitoso
+                </div>) : ""*/
+        }
+        
+        
     </div>
 }
 
 interface SeccionCentralProps {
     texto : string
+    errorLogin? : boolean
     onLogin : (username : string, password: string) => void
 }
 
