@@ -2,6 +2,7 @@ import FormularioLogin from "./FormularioLogin"
 import Titulo from "./Titulo"
 
 import "./SeccionCentral.css"
+import { Link, NavLink } from "react-router-dom"
 
 const SeccionCentral = (props : SeccionCentralProps) => {
     return <div>
@@ -33,6 +34,8 @@ const SeccionCentral = (props : SeccionCentralProps) => {
                     Login exitoso
                 </div>) : ""*/
         }
+        <Link className="btn btn-primary" to={ "/main" } >Link hacia MainPage</Link>
+        <NavLink to={ "/main" } >Link hacia MainPage</NavLink>
         
         
     </div>
